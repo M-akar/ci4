@@ -23,7 +23,7 @@ class Users extends BaseController
 				]
 			];
 
-			if (! $this->validate($rules, $errors)) {
+			if ( !$this->validate($rules, $errors) ){
 
 				$data['validation']  = $this->validator;
 			} else {
@@ -59,8 +59,7 @@ class Users extends BaseController
     
 	public function create()
 	{
-
-		
+				
 		helper(['form']);
 		$model = new UserModel();		
 		$data['users'] = $model->findAll();
